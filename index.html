@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>Smarty - Multipurpose + Admin</title>
+		<title> Rocket Elevators - Multipurpose + Admin</title>
 		<meta name="description" content="" />
 		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
 
@@ -136,7 +136,7 @@
 
 						<!-- Logo -->
 						<a class="logo float-left scrollTo" href="#top">
-							<img src="./demo_files/images/Elevators/R2.png" alt="logo Rocket Elevators" />
+							<img src="./demo_files/images/Elevators/R2.png" alt="logo Rocket Elevators" style=" margin: 5% 0 5% 0; height: 80%; /* box-sizing; border-box; */">
 						</a>
 
 						<!-- 
@@ -154,44 +154,37 @@
 									
 									Add .external for an external link!
 								-->
+								<!-- NAVIGATION -->
 								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
-									<li class="active"><!-- HOME -->
-										<a href="#home">
+									<li class="active">
+										<!-- HOME -->
+										<a href="#home" id="home-nav">
 											HOME 
 										</a>
 									</li>
 									<li><!-- SERVICES -->
-										<a href="#services">
+										<a href="#services" id="services-nav">
 											SERVICES
 										</a>
 									</li>
-									<li><!-- WORK -->
-										<a href="#work">
-											WORK
+									<li><!-- PORTFOLIO -->
+										<a href="#portfolio" id="portfolio-nav">
+											PORTFOLIO
 										</a>
 									</li>
 									<li><!-- NEWS -->
-										<a href="#news">
+										<a href="#news" id="news-nav">
 											NEWS
 										</a>
 									</li>
-									<li><!-- OVERVIEW -->
-										<a href="#overview">
-											OVERVIEW
-										</a>
-									</li>
 									<li><!-- CLIENTS -->
-										<a href="#clients">
+										<a href="#clients" id="clients-nav">
 											CLIENTS
 										</a>
 									</li>
-									<li><!-- BLOG -->
-										<a class="external" href="blog-default-aside-left.html">
-											BLOG
-										</a>
 									</li>
 									<li><!-- CONTACT -->
-										<a href="#contact">
+										<a href="#contact" id="contact-nav">
 											CONTACT
 										</a>
 									</li>
@@ -239,6 +232,9 @@
 						data-height="800"
 				
 				-->
+
+				<!-- SECTION SLIDER -->
+				<div class="slider fullwidthbanner-container roundedcorners"></div> <!-- **à vérifier le </div> semble de trop selon le cahier d'exigences** -->
 				<div class="fullwidthbanner" data-height="600" data-shadow="0" data-navigationStyle="preview2">
 					<ul class="hide">
 					
@@ -311,16 +307,16 @@
 							</div>
 
 							<div class="tp-caption skewfromleft tp-resizeme  un-button-2-lg"
-							data-x="750"
-							data-y="400" 
-							data-speed="300"
-							data-start="3000"
-							data-easing="Power3.easeInOut"
-							data-splitin="none"
-							data-splitout="none"
-							data-elementdelay="0.1"
-							data-endelementdelay="0.1"
-							data-endspeed="300"
+								data-x="750"
+								data-y="400" 
+								data-speed="300"
+								data-start="3000"
+								data-easing="Power3.easeInOut"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="300"
 
 							style="z-index: 20; max-width: auto; max-height: auto; white-space: nowrap;">
 								<a class="btn btn-primary btn-lg" href="#"> Request for submission &nbsp; <i class="fa fa-angle-right"></i></a>
@@ -403,7 +399,7 @@
 								data-elementdelay="0.1"
 								data-endelementdelay="0.1"
 								data-endspeed="500"
-								style="z-index: 2; color:#0c64a4; font-size:65px; line-height:85px; font-weight:bold; letter-spacing:0; ext-shadow:2px 0 0 rgba(255, 255, 255, 0.3), -2px 0 0 rgba(255, 255, 255, 0.3), 0 2px 0 rgba(255, 255, 255, 0.3), 0 -2px 0 rgba(255, 255, 255, 0.3), 1px 1px rgba(255, 255, 255, 0.3), -1px -1px 0 rgba(255, 255, 255, 0.3), 1px -1px 0 rgba(255, 255, 255, 0.3), -1px 1px 0 rgba(255, 255, 255, 0.3);">
+								style="z-index: 2; color:#0c64a4; font-size:65px; line-height:85px; font-weight:bold; letter-spacing:0; text-shadow:2px 0 0 rgba(255, 255, 255, 0.3), -2px 0 0 rgba(255, 255, 255, 0.3), 0 2px 0 rgba(255, 255, 255, 0.3), 0 -2px 0 rgba(255, 255, 255, 0.3), 1px 1px rgba(255, 255, 255, 0.3), -1px -1px 0 rgba(255, 255, 255, 0.3), 1px -1px 0 rgba(255, 255, 255, 0.3), -1px 1px 0 rgba(255, 255, 255, 0.3);">
 									Together <br />
 									Let's create the future
 							</div>
@@ -419,7 +415,7 @@
 								data-elementdelay="0.1"
 								data-endelementdelay="0.1"
 								data-endspeed="500"
-								style="z-index: 3; font-size:35px; color:white; font-weight:300; ext-shadow:2px 0 0 rgba(255, 255, 255, 0.3), -2px 0 0 rgba(255, 255, 255, 0.3), 0 2px 0 rgba(255, 255, 255, 0.3), 0 -2px 0 rgba(255, 255, 255, 0.3), 1px 1px rgba(255, 255, 255, 0.3), -1px -1px 0 rgba(255, 255, 255, 0.3), 1px -1px 0 rgba(255, 255, 255, 0.3), -1px 1px 0 rgba(255, 255, 255, 0.3);">
+								style="z-index: 3; font-size:35px; color:white; font-weight:300; text-shadow:2px 0 0 rgba(255, 255, 255, 0.3), -2px 0 0 rgba(255, 255, 255, 0.3), 0 2px 0 rgba(255, 255, 255, 0.3), 0 -2px 0 rgba(255, 255, 255, 0.3), 1px 1px rgba(255, 255, 255, 0.3), -1px -1px 0 rgba(255, 255, 255, 0.3), 1px -1px 0 rgba(255, 255, 255, 0.3), -1px 1px 0 rgba(255, 255, 255, 0.3);">
 									Elevators and hoists are key elements in the development, <br/> 
 									implementation and management of your small to large-scale projects.
 							</div>
@@ -444,65 +440,53 @@
 
 				</div>
 			</div>
+			<!-- SECTION SLIDER -->
+
 			<!-- /REVOLUTION SLIDER -->
-
-
 			<hr class="m-0" /><!-- 1px line separator -->
 
 
-			<!-- BUTTON CALLOUT -->
-			<a href="#" class="btn btn-xlg btn-primary fs-20 fullwidth m-0 rad-0 p-40">
+			<!-- BUTTON CALLOUT **-->
+			<!-- <a href="#" class="btn btn-xlg btn-primary fs-20 fullwidth m-0 rad-0 p-40">
 				<span class="font-lato fs-30">
 					Did Rocket Elevators convinced you? 
 					<strong>Contact us &raquo;</strong>
 				</span>
-			</a>
+			</a> -->
 			<!-- /BUTTON CALLOUT -->
 
 
 			
-			<!-- Services -->
-			<section id="services">
+			<!-- SECTION SERVICES -->
+			 <section id="services"> 
 				<div class="container">
-
 					<div class="row">
 						<div class="col-sm-4">
-							<a class="image-hover lightbox" href="https://vimeo.com/ondemand/buildingwithawareness/108669033" data-plugin-options='{"type":"iframe"}'>
-								<span class="image-hover-icon image-hover-dark"><!-- image-hover-light | image-hover-dark -->
-									<i class="fa fa-vimeo-square"><!-- video icon --></i>
-								</span>
-								<img class="img-fluid" src="demo_files/images/thematics/construction/c3-min.jpg" alt="img" />
-							</a>
-
-							<h3 class="mt-10">The Green Building</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque.</p>
-							<a href="#" class="btn btn-default">THE BENEFITS</a>
+							<img class="img-fluid" src="./demo_files/images/Elevators/achievements.jpeg" alt="img" /> 
+							<h3 class="mt-10"> Our achievements </h3>
+							<p> See for yourself our achievements and accomplishments. </p>
+							<a href="#" class="btn btn-default"> Portfolio</a>
 						</div>
 
 						<div class="col-sm-4">
-							<a class="image-hover lightbox" href="https://www.youtube.com/watch?v=ZhCyoDlltbo" data-plugin-options='{"type":"iframe"}'>
-								<span class="image-hover-icon image-hover-dark"><!-- image-hover-light | image-hover-dark -->
-									<i class="fa fa-youtube-square"><!-- video icon --></i>
-								</span>
-								<img class="img-fluid" src="demo_files/images/thematics/construction/c1-min.jpg" alt="img" />
-							</a>
-							<h3 class="mt-10">Best House Renovation</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque.</p>
-							<a href="#" class="btn btn-default">READ MORE</a>
+								<img class="img-fluid" src="./demo_files/images/Elevators/residential_project.jpg" alt="img" /> 
+							<h3 class="mt-10"> Residential</h3>
+							<p> A perfect team for perfect comfort and ergonomics. </p>
+							<a href="#" class="btn btn-default">Residential Elevators Service</a>
 						</div>
 
 						<div class="col-sm-4">
-							<img class="img-fluid" src="demo_files/images/thematics/construction/c2-min.jpg" alt="img" />
-							<h3 class="mt-10">The Effective Teamwork</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque.</p>
-							<a href="#" class="btn btn-default">READ MORE</a>
+							<img class="img-fluid" src="./demo_files/images/Elevators/commercial_project.jpg" alt="img" />
+							<h3 class="mt-10"> Commercial</h3>
+							<p> Professional work with experienced people </p>
+							<a href="#" class="btn btn-default">Commercial lift services </a>
 						</div>
 
 					</div>
 
 				</div>
 			</section>
-			<!-- /Services -->
+			<!-- /SECTION SERVICES -->
 
 			
 
@@ -514,10 +498,10 @@
 				<div class="container">
 
 					<div class="text-center">
-						<h2 class="fs-40 fw-300">Contractor &amp; Construction Since 1982</h2>
-						<a class="btn btn-default btn-lg" href="#">GET A QUOTE <i class="fa fa-angle-right"></i></a> 
-						&nbsp; OR &nbsp; 
-						<a class="btn btn-warning btn-lg" href="#">OUR SERVICES <i class="fa fa-angle-right"></i></a>
+						<h2 class="fs-40 fw-300">Rocket Elevators is proud to be in the elevator since 1976</h2>
+						<a class="btn btn-default btn-lg" href="#">For a quote <i class="fa fa-angle-right"></i></a> 
+						
+						<a class="btn btn-warning btn-lg" href="#" style="margin-left: 3%;">Contact us <i class="fa fa-angle-right"></i></a>
 					</div>
 
 				</div>
@@ -525,12 +509,9 @@
 			<!-- /Parallax -->
 
 
-
-
-			<!-- PORTFOLIO -->
-			<section id="work">
+			<!-- SECTION PORTFOLIO -->
+			<section id="portfolio">
 				<div class="container">
-
 					<div class="heading-title heading-dotted text-center">
 						<h2>Featured Work</h2>
 					</div>
@@ -547,11 +528,8 @@
 				</div>
 
 				<div id="portfolio" class="portfolio-nogutter">
-
 						<div class="row mix-grid">
-
 							<div class="col-md-3 col-sm-3 mix design"><!-- item -->
-
 								<div class="item-box">
 									<figure>
 										<span class="item-hover">
@@ -571,14 +549,14 @@
 											</span>
 										</span>
 
-										<img class="img-fluid" src="demo_files/images/thematics/construction/w1-min.jpg" width="600" height="399" alt="">
+										<img class="img-fluid" src="" width="600" height="399" alt="">
 									</figure>
 
 									<div class="item-box-desc">
-										<h3>Architect Project</h3>
+										<h3>Elevetor residential RD300 </h3>
 										<ul class="list-inline categories m-0">
-											<li><a href="#">Architecture</a></li>
-											<li><a href="#">Design</a></li>
+											<li><a href="#">Elevator residenti</a></li>
+											<li><a href="#">RD300</a></li>
 										</ul>
 									</div>
 
@@ -622,9 +600,8 @@
 								</div>
 
 							</div><!-- /item -->
-
-
-							<div class="col-md-3 col-sm-3 mix photography"><!-- item -->
+							<div class="col-md-3 col-sm-3 mix photography">
+								<!-- item -->
 
 								<div class="item-box">
 									<figure>
@@ -857,11 +834,11 @@
 
 
 			<!-- Testimonials -->
-			<section class="section-xs dark">
+			<section id="team" class="section-xs dark">
 				<div class="container">
 
 					<div class="owl-carousel text-center owl-testimonial m-0" data-plugin-options='{"singleItem": true, "autoPlay": 3500, "navigation": false, "pagination": true, "transitionStyle":"fade"}'>
-						<div class="testimonial">
+						<div id="CEO" class="testimonial">
 							<figure>
 								<img class="rounded" src="demo_files/images/people/300x300/11-min.jpg" alt="" />
 							</figure>
@@ -873,7 +850,7 @@
 								</cite>
 							</div>
 						</div>
-						<div class="testimonial">
+						<div id="employee" class="testimonial">
 							<figure>
 								<img class="rounded" src="demo_files/images/people/300x300/12-min.jpg" alt="" />
 							</figure>
@@ -896,7 +873,7 @@
 
 
 			<!-- News -->
-			<section id="news">
+			<section id="news-nav">
 				<div class="container">
 
 					<div class="heading-title heading-dotted text-center">
@@ -922,160 +899,38 @@
 							.owl-padding-15
 							.owl-padding-20
 					-->
-					<div class="owl-carousel owl-padding-10 buttons-autohide controlls-over" data-plugin-options='{"singleItem": false, "items":"4", "autoPlay": 4000, "navigation": true, "pagination": false}'>
+					<div class="owl-carousel owl-padding-10 buttons-autohide controlls-over" data-plugin-options='{"singleItem": false, "items":"1", "autoPlay": 4000, "navigation": true, "pagination": false}'>
 						<div class="img-hover">
-							<a href="blog-single-default.html">
-								<img class="img-fluid" src="demo_files/images/451x300/24-min.jpg" alt="">
+							<a href="https://www.clickondetroit.com/consumer/help-me-hank/2022/01/25/seniors-living-in-trenton-towers-apartments-concerned-for-safety-over-broken-elevators/">
+								<img class="img-fluid" src="demo_files/images/Elevators/news/news_1.jpg" alt="">
 							</a>
 
-							<h4 class="text-left mt-20"><a href="blog-single-default.html">Lorem Ipsum Dolor</a></h4>
-							<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, asperiores quod est tenetur in.</p>
+							<h4 class="text-left mt-20">
+								<a href="https://www.clickondetroit.com/consumer/help-me-hank/2022/01/25/seniors-living-in-trenton-towers-apartments-concerned-for-safety-over-broken-elevators/">Seniors living in Trenton Towers apartments concerned for safety over broken elevators</a>
+							</h4>
+							<p class="text-left">Our elevators went out this weekend and our elevator technicians came out 
+								Saturday and Sunday and returned this morning, and as of 1 p.m. today...</p>
 							<ul class="text-left fs-12 list-inline list-separator">
 								<li>
 									<i class="fa fa-calendar"></i> 
-									29th Jan 2017
-								</li>
-								<li>
-									<a href="blog-single-default.html#comments">
-										<i class="fa fa-comments"></i> 
-										3
-									</a>
+									25th Jan 2022
 								</li>
 							</ul>
 						</div>
 						<div class="img-hover">
-							<a href="blog-single-default.html">
-								<img class="img-fluid" src="demo_files/images/451x300/17-min.jpg" alt="">
+							<a href="https://www.clickondetroit.com/consumer/help-me-hank/2022/01/25/seniors-living-in-trenton-towers-apartments-concerned-for-safety-over-broken-elevators/">
+								<img class="img-fluid" src="demo_files/images/Elevators/news/news_1.jpg" alt="">
 							</a>
 
-							<h4 class="text-left mt-20"><a href="blog-single-default.html">Lorem Ipsum Dolor</a></h4>
-							<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, asperiores quod est tenetur in.</p>
+							<h4 class="text-left mt-20">
+								<a href="https://www.clickondetroit.com/consumer/help-me-hank/2022/01/25/seniors-living-in-trenton-towers-apartments-concerned-for-safety-over-broken-elevators/">Seniors living in Trenton Towers apartments concerned for safety over broken elevators</a>
+							</h4>
+							<p class="text-left">Our elevators went out this weekend and our elevator technicians came out 
+								Saturday and Sunday and returned this morning, and as of 1 p.m. today...</p>
 							<ul class="text-left fs-12 list-inline list-separator">
 								<li>
 									<i class="fa fa-calendar"></i> 
-									29th Jan 2017
-								</li>
-								<li>
-									<a href="blog-single-default.html#comments">
-										<i class="fa fa-comments"></i> 
-										3
-									</a>
-								</li>
-							</ul>
-						</div>
-						<div class="img-hover">
-							<a href="blog-single-default.html">
-								<img class="img-fluid" src="demo_files/images/451x300/30-min.jpg" alt="">
-							</a>
-
-							<h4 class="text-left mt-20"><a href="blog-single-default.html">Lorem Ipsum Dolor</a></h4>
-							<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, asperiores quod est tenetur in.</p>
-							<ul class="text-left fs-12 list-inline list-separator">
-								<li>
-									<i class="fa fa-calendar"></i> 
-									29th Jan 2017
-								</li>
-								<li>
-									<a href="blog-single-default.html#comments">
-										<i class="fa fa-comments"></i> 
-										3
-									</a>
-								</li>
-							</ul>
-						</div>
-						<div class="img-hover">
-							<a href="blog-single-default.html">
-								<img class="img-fluid" src="demo_files/images/451x300/26-min.jpg" alt="">
-							</a>
-
-							<h4 class="text-left mt-20"><a href="blog-single-default.html">Lorem Ipsum Dolor</a></h4>
-							<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, asperiores quod est tenetur in.</p>
-							<ul class="text-left fs-12 list-inline list-separator">
-								<li>
-									<i class="fa fa-calendar"></i> 
-									29th Jan 2017
-								</li>
-								<li>
-									<a href="blog-single-default.html#comments">
-										<i class="fa fa-comments"></i> 
-										3
-									</a>
-								</li>
-							</ul>
-						</div>
-						<div class="img-hover">
-							<a href="blog-single-default.html">
-								<img class="img-fluid" src="demo_files/images/451x300/18-min.jpg" alt="">
-							</a>
-							<h4 class="text-left mt-20"><a href="blog-single-default.html">Lorem Ipsum Dolor</a></h4>
-							<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, asperiores quod est tenetur in.</p>
-							<ul class="text-left fs-12 list-inline list-separator">
-								<li>
-									<i class="fa fa-calendar"></i> 
-									29th Jan 2017
-								</li>
-								<li>
-									<a href="blog-single-default.html#comments">
-										<i class="fa fa-comments"></i> 
-										3
-									</a>
-								</li>
-							</ul>
-						</div>
-						<div class="img-hover">
-							<a href="blog-single-default.html">
-								<img class="img-fluid" src="demo_files/images/451x300/34-min.jpg" alt="">
-							</a>
-							<h4 class="text-left mt-20"><a href="blog-single-default.html">Lorem Ipsum Dolor</a></h4>
-							<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, asperiores quod est tenetur in.</p>
-							<ul class="text-left fs-12 list-inline list-separator">
-								<li>
-									<i class="fa fa-calendar"></i> 
-									29th Jan 2017
-								</li>
-								<li>
-									<a href="blog-single-default.html#comments">
-										<i class="fa fa-comments"></i> 
-										3
-									</a>
-								</li>
-							</ul>
-						</div>
-						<div class="img-hover">
-							<a href="blog-single-default.html">
-								<img class="img-fluid" src="demo_files/images/451x300/37-min.jpg" alt="">
-							</a>
-							<h4 class="text-left mt-20"><a href="blog-single-default.html">Lorem Ipsum Dolor</a></h4>
-							<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, asperiores quod est tenetur in.</p>
-							<ul class="text-left fs-12 list-inline list-separator">
-								<li>
-									<i class="fa fa-calendar"></i> 
-									29th Jan 2017
-								</li>
-								<li>
-									<a href="blog-single-default.html#comments">
-										<i class="fa fa-comments"></i> 
-										3
-									</a>
-								</li>
-							</ul>
-						</div>
-						<div class="img-hover">
-							<a href="blog-single-default.html">
-								<img class="img-fluid" src="demo_files/images/451x300/23-min.jpg" alt="">
-							</a>
-							<h4 class="text-left mt-20"><a href="blog-single-default.html">Lorem Ipsum Dolor</a></h4>
-							<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, asperiores quod est tenetur in.</p>
-							<ul class="text-left fs-12 list-inline list-separator">
-								<li>
-									<i class="fa fa-calendar"></i> 
-									29th Jan 2017
-								</li>
-								<li>
-									<a href="blog-single-default.html#comments">
-										<i class="fa fa-comments"></i> 
-										3
-									</a>
+									25th Jan 2022
 								</li>
 							</ul>
 						</div>
@@ -1086,47 +941,8 @@
 			<!-- /News -->
 
 
-
-
-			<!-- Overview -->
-			<section id="overview">
-				<div class="container text-center">
-
-					<div class="row text-left">
-
-						<div class="col-sm-8">
-							<img src="demo_files/images/laptop.png" alt="product image" />
-						</div>
-
-						<div class="col-sm-4">
-							<h3 class="fw-300">Quick <span>Overview</span></h3>
-						
-							<p>Lorem ipsum dolor sit amet, hinc dolores noluisse at vel, ex quod aperiri scaevola has, cum te sanctus denique. Eu liber docendi petentium has, labore.</p>
-							<p>Etiam falli mentitum id mel, ut mel sumo postulant referrentur. At has minim imperdiet, soluta offendit ocurreret sea an. </p>
-							
-							<hr />
-
-							<ul class="list-unstyled list-icons">
-								<li><i class="fa fa-check"></i> Nobis nemore epicuri pro ea</li>
-								<li><i class="fa fa-check"></i> Qui dicunt singulis dissentias an</li>
-								<li><i class="fa fa-check"></i> Ea vis diceret constituam</li>
-								<li><i class="fa fa-check"></i> Mei no autem idque integre, sumo facilis</li>
-								<li><i class="fa fa-check"></i> Est quodsi labitur moderatius an</li>
-							</ul>
-
-						</div>
-					</div>
-
-				</div>
-			</section>
-			<!-- /Overview -->
-
-
-
-
-
 			<!-- Clients -->
-			<section id="clients" class="alternate">
+			<section id="clients-nav" class="alternate">
 				<div class="container">
 
 					<div class="heading-title heading-dotted text-center">
@@ -1184,7 +1000,7 @@
 
 
 			<!-- CONTACT -->
-			<section id="contact">
+			<section id="contact-nav">
 				<div class="container">
 
 					<header class="text-center mb-60">
