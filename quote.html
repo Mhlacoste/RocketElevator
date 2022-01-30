@@ -2,9 +2,10 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title> Rocket Elevators - Multipurpose + Admin</title>
+		<title>Rocket Elevators - Quote</title>
 		<meta name="description" content="" />
 		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+		<link rel="icon" href="assets/images/Elevators/favicon.png">
 
 		<!-- mobile settings -->
 		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
@@ -29,27 +30,6 @@
 		<link href="assets/css/color_scheme/blue.css" rel="stylesheet" type="text/css" id="color_scheme" />
 	</head>
 
-	<!--
-		AVAILABLE BODY CLASSES:
-		
-		smoothscroll 			= create a browser smooth scroll
-		enable-animation		= enable WOW animations
-
-		bg-grey					= grey background
-		grain-grey				= grey grain background
-		grain-blue				= blue grain background
-		grain-green				= green grain background
-		grain-blue				= blue grain background
-		grain-orange			= orange grain background
-		grain-yellow			= yellow grain background
-		
-		boxed 					= boxed layout
-		pattern1 ... patern11	= pattern background
-		menu-vertical-hide		= hidden, open on click
-		
-		BACKGROUND IMAGE [together with .boxed class]
-		data-background="assets/images/_smarty/boxed_background/1.jpg"
-	-->
 	<body class="smoothscroll enable-animation">
 
 		<!-- SLIDE TOP -->
@@ -89,32 +69,6 @@
 		<!-- wrapper -->
 		<div id="wrapper">
 
-			<!-- 
-				AVAILABLE HEADER CLASSES
-
-				Default nav height: 96px
-				.header-md 		= 70px nav height
-				.header-sm 		= 60px nav height
-
-				.b-0 		= remove bottom border (only with transparent use)
-				.transparent	= transparent header
-				.translucent	= translucent header
-				.sticky			= sticky header
-				.static			= static header
-				.dark			= dark header
-				.bottom			= header on bottom
-				
-				shadow-before-1 = shadow 1 header top
-				shadow-after-1 	= shadow 1 header bottom
-				shadow-before-2 = shadow 2 header top
-				shadow-after-2 	= shadow 2 header bottom
-				shadow-before-3 = shadow 3 header top
-				shadow-after-3 	= shadow 3 header bottom
-
-				.clearfix		= required for mobile menu, do not remove!
-
-				Example Usage:  class="clearfix sticky header-sm transparent b-0"
-			-->
 			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
 
 				<!-- TOP NAV -->
@@ -128,24 +82,15 @@
 
 						<!-- Logo -->
 						<a class="logo float-left scrollTo" href="#top">
-							<img src="./demo_files/images/Elevators/R2.png" alt="logo Rocket Elevators" style="padding: 5%;">
+							<img src="./assets/images/Elevators/R2.png" alt="logo Rocket Elevators" style="padding: 5%;">
 						</a>
 
 						<!-- 
 							Top Nav 
-							
-							AVAILABLE CLASSES:
-							submenu-dark = dark sub menu
 						-->
 						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
 							<nav class="nav-main">
 
-								<!-- 
-									.nav-onepage
-									Required for onepage navigation links
-									
-									Add .external for an external link!
-								-->
 								<!-- NAVIGATION -->
 								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
 									<li>
@@ -173,7 +118,6 @@
 										<a href="index.html#clients" id="clients-nav">
 											CLIENTS
 										</a>
-									</li>
 									</li>
 									<li><!-- CONTACT -->
 										<a href="index.html#contact" id="contact-nav">
@@ -224,7 +168,7 @@
                                     </div>
 
                                     <!-- RESIDENTIAL -->
-                                    <div class="row residential hidden">
+                                    <div class="row residential">
                                         <div id="number-of-apartments" class="col-md-6">
                                             <label for="number-of-apartments">Number of apartments</label>
                                             <input required type="number" value="" class="form-control" name="number-of-apartments">
@@ -241,7 +185,7 @@
                                     <!-- RESIDENTIAL -->
 
                                     <!-- COMMERCIAL -->
-                                    <div class="row commercial hidden">
+                                    <div class="row commercial d-none">
                                         <div id="number-of-floors" class="col-md-6">
                                             <label for="number-of-floors">Number of floors</label>
                                             <input required type="number" value="" class="form-control" name="number-of-floors">
@@ -266,7 +210,7 @@
                                     <!-- COMMERCIAL -->
 
                                     <!-- CORPORATE -->
-                                    <div class="row corporate hidden">
+                                    <div class="row corporate d-none">
                                         <div id="number-of-floors" class="col-md-6">
                                             <label for="number-of-floors">Number of floors</label>
                                             <input required type="number" value="" class="form-control" name="number-of-floors">
@@ -291,7 +235,7 @@
                                     <!-- CORPORATE -->
 
                                     <!-- HYBRID -->
-                                    <div class="row hybrid hidden">
+                                    <div class="row hybrid d-none">
                                         <div id="number-of-floors" class="col-md-6">
                                             <label for="number-of-floors">Number of floors</label>
                                             <input required type="number" value="" class="form-control" name="number-of-floors">
@@ -320,25 +264,20 @@
                                     <!-- HYBRID -->
 
                                     <!-- PRODUCT LINE -->
-                                        <ul id="standard" >
-                                            <li>
-                                            <input type="submit" value="standard" name="standard" style="margin-left:2em;width:8em;display:inline-block;">
-                                            </li>
-                                        </ul>
-                                        <ul id="premium" >
-                                            <li>
-                                                <input type="submit" value="premium" name="premium" style="margin-left:2em;width:8em;display:inline-block;">
-                                            </li>
-                                        </ul>
-                                        <ul id="excelium" >
-                                            <li>
-                                                <input type="submit" value="excelium" name="excelium" style="margin-left:2em;width:8em;display:inline-block;">
-                                        </li>
-                                    </ul>
-
-                                    
-                                    <!-- PRODUCT LINE -->
-
+									<div class="row">
+										<div class="col-lg-3">
+											<input type="radio" name="productLine" id="standard" value="standard"/>
+											Standard
+										</div>
+										<div class="col-lg-3">
+											<input type="radio" name="productLine" id="premium" value="premium"/>
+											Premium
+										</div>
+										<div class="col-lg-3">
+											<input type="radio" name="productLine" id="excelium" value="excelium"/>
+											Excelium
+										</div>
+									</div>
 
                                     <!-- RESULTS -->
                                     <div class="row ">

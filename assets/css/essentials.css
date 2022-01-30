@@ -2767,37 +2767,37 @@ blockquote cite:after {
 /** 10. Background Patterns
 *************************************************** **/
 .pattern1 {
-	background:url('../images/_smarty/patterns/pattern1.png') repeat fixed;
+	background:url('../images/theme/patterns/pattern1.png') repeat fixed;
 }
 .pattern2 {
-	background:url('../images/_smarty/patterns/pattern2.png') repeat fixed;
+	background:url('../images/theme/patterns/pattern2.png') repeat fixed;
 }
 .pattern3 {
-	background:url('../images/_smarty/patterns/pattern3.png') repeat fixed;
+	background:url('../images/theme/patterns/pattern3.png') repeat fixed;
 }
 .pattern4 {
-	background:url('../images/_smarty/patterns/pattern4.png') repeat fixed;
+	background:url('../images/theme/patterns/pattern4.png') repeat fixed;
 }
 .pattern5 {
-	background:url('../images/_smarty/patterns/pattern5.png') repeat fixed;
+	background:url('../images/theme/patterns/pattern5.png') repeat fixed;
 }
 .pattern6 {
-	background:url('../images/_smarty/patterns/pattern6.png') repeat fixed;
+	background:url('../images/theme/patterns/pattern6.png') repeat fixed;
 }
 .pattern7 {
-	background:url('../images/_smarty/patterns/pattern7.png') repeat fixed;
+	background:url('../images/theme/patterns/pattern7.png') repeat fixed;
 }
 .pattern8 {
-	background:url('../images/_smarty/patterns/pattern8.png') repeat fixed;
+	background:url('../images/theme/patterns/pattern8.png') repeat fixed;
 }
 .pattern9 {
-	background:url('../images/_smarty/patterns/pattern9.png') repeat fixed;
+	background:url('../images/theme/patterns/pattern9.png') repeat fixed;
 }
 .pattern10 {
-	background:url('../images/_smarty/patterns/pattern10.png') repeat fixed;
+	background:url('../images/theme/patterns/pattern10.png') repeat fixed;
 }
 .pattern11 {
-	background:url('../images/_smarty/patterns/pattern11.png') repeat fixed;
+	background:url('../images/theme/patterns/pattern11.png') repeat fixed;
 }
 
 
@@ -3424,7 +3424,7 @@ img.mfp-img {
 
 /* mouse grab icon */
 .grabbing { 
-    cursor:url(../images/_smarty/grabbing.png) 8 8, move;
+    cursor:url(../images/theme/grabbing.png) 8 8, move;
 }
 
 /* fix */
