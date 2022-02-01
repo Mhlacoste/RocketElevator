@@ -167,114 +167,57 @@
                                         </div>
                                     </div>
 
-                                    <!-- RESIDENTIAL -->
-                                    <div class="row residential">
-                                        <div id="number-of-apartments" class="col-md-6">
+									<div class="row">
+										<div id="number-of-apartments" class="col-md-6 inputField residential" style="display:none;">
                                             <label for="number-of-apartments">Number of apartments</label>
                                             <input required type="number" value="" class="form-control" name="number-of-apartments" min="0">
-                                         </div>
-                                        <div id="number-of-floors" class="col-md-6">
+                                        </div>
+										<div id="number-of-floors" class="col-md-6 inputField residential commercial corporate hybrid" style="display:none;">
                                             <label for="number-of-floors">Number of floors</label>
                                             <input required type="number" value="" class="form-control" name="number-of-floors" min="0">
                                         </div>
-                                        <div id="number-of-basements" class="col-md-6">
+                                        <div id="number-of-basements" class="col-md-6 inputField residential commercial corporate hybrid" style="display:none;">
                                             <label for="number-of-basements">Number of basements</label>
                                             <input required type="number" value="" class="form-control" name="number-of-basements" min="0">
                                         </div>
-                                    </div>
-                                    <!-- RESIDENTIAL -->
-
-                                    <!-- COMMERCIAL -->
-                                    <div class="row commercial">
-                                        <div id="number-of-floors" class="col-md-6">
-                                            <label for="number-of-floors">Number of floors</label>
-                                            <input required type="number" value="" class="form-control" name="number-of-floors" min="0">
-                                        </div>
-                                        <div id="number-of-basements" class="col-md-6">
-                                            <label for="number-of-basements">Number of basements</label>
-                                            <input required type="number" value="" class="form-control" name="number-of-basements"min="0">
-                                        </div>
-                                        <div id="number-of-companies" class="col-md-6">
-                                            <label for="number-of-companies">Number of compagnies</label>
+                                        <div id="number-of-companies" class="col-md-6 inputField commercial hybrid" style="display:none;">
+                                            <label for="number-of-companies">Number of companies</label>
                                             <input required type="number" value="" class="form-control" name="number-of-companies"min="0">
                                         </div>
-                                        <div id="number-of-parking-spots" class="col-md-6">
+                                        <div id="number-of-parking-spots" class="col-md-6 inputField commercial corporate hybrid" style="display:none;">
                                             <label for="number-of-parking-spots">Number of parking spots</label>
                                             <input required type="number" value="" class="form-control" name="number-of-parking-spots" min="0">
                                         </div>
-                                        <div id="number-of-elevators" class="col-md-6">
+                                        <div id="number-of-elevators" class="col-md-6 inputField commercial" style="display:none;">
                                             <label for="number-of-elevators">Number of elevators</label>
                                             <input required type="number" value="" class="form-control" name="number-of-elevators" min="0">
                                         </div>
-                                    </div>
-                                    <!-- COMMERCIAL -->
-
-                                    <!-- CORPORATE -->
-                                    <div class="row corporate">
-                                        <div id="number-of-floors" class="col-md-6">
-                                            <label for="number-of-floors">Number of floors</label>
-                                            <input required type="number" value="" class="form-control" name="number-of-floors" min="0">
-                                        </div>
-                                        <div id="number-of-basements" class="col-md-6">
-                                            <label for="number-of-basements">Number of basements</label>
-                                            <input required type="number" value="" class="form-control" name="number-of-basements" min="0">
-                                        </div>
-                                        <div id="number-of-parking-spots" class="col-md-6">
-                                            <label for="number-of-parking-spots">Number of parking-spots</label>
-                                            <input required type="number" value="" class="form-control" name="parking-spots" min="0">
-                                        </div>
-                                        <div id="number-of-corporations" class="col-md-6">
+										<div id="number-of-corporations" class="col-md-6 inputField corporate" style="display:none;">
                                             <label for="number-of-corporations">Number of corporations</label>
                                             <input required type="number" value="" class="form-control" name="number-of-corporations" min="0">
                                         </div>
-                                        <div id="maximum-of-occupancy" class="col-md-6">
+                                        <div id="maximum-of-occupancy" class="col-md-6 inputField corporate hybrid" style="display:none;">
                                             <label for="maximum-of-occupancy">Maximum of occupancy</label>
                                             <input required type="number" value="" class="form-control" name="maximum-of-occupancy" min="0">
                                         </div>
-                                    </div>
-                                    <!-- CORPORATE -->
-
-                                    <!-- HYBRID -->
-                                    <div class="row hybrid">
-                                        <div id="number-of-floors" class="col-md-6">
-                                            <label for="number-of-floors">Number of floors</label>
-                                            <input required type="number" value="" class="form-control" name="number-of-floors" min="0">
-                                        </div>
-                                        <div id="number-of-basements" class="col-md-6">
-                                            <label for="number-of-basements">Number of basements</label>
-                                            <input required type="number" value="" class="form-control" name="number-of-basements" min="0">
-                                        </div>
-                                        <div id="number-of-companies" class="col-md-6">
-                                            <label for="number-of-companies">Number of compagnies</label>
-                                            <input required type="number" value="" class="form-control" name="number-of-companies" min="0">
-                                        </div>
-                                        <div id="number-of-parking-spots" class="col-md-6">
-                                            <label for="number-of-parking-spots">Number of parking-spots</label>
-                                            <input required type="number" value="" class="form-control" name="parking-spots" min="0">
-                                        </div>
-                                        <div id="number-of-occupancy" class="col-md-6">
-                                            <label for="maximum-of-occupancy">Maximum of occupancy</label>
-                                            <input required type="number" value="" class="form-control" name="maximum-of-occupancy" min="0">
-                                        </div>
-                                        <div id="business-hours" class="col-md-6">
+										<div id="business-hours" class="col-md-6 inputField hybrid" style="display:none;">
                                             <label for="business-hours">Business hours</label>
                                             <input required type="number" value="" class="form-control" name="business-hours" min="0" max="24">
                                         </div>
-                                    </div>
-                                    <!-- HYBRID -->
+									</div>
 
                                     <!-- PRODUCT LINE -->
-									<div class="row">
+									<div class="row product-line" style="display:none;">
 										<div class="col-lg-3">
-											<input type="radio" name="productLine" id="standard" value="standard"/>
+											<input type="radio" name="product-line" id="standard" value="standard"/>
 											Standard
 										</div>
 										<div class="col-lg-3">
-											<input type="radio" name="productLine" id="premium" value="premium"/>
+											<input type="radio" name="product-line" id="premium" value="premium"/>
 											Premium
 										</div>
 										<div class="col-lg-3">
-											<input type="radio" name="productLine" id="excelium" value="excelium"/>
+											<input type="radio" name="product-line" id="excelium" value="excelium"/>
 											Excelium
 										</div>
 									</div>
@@ -283,23 +226,23 @@
                                     <div class="row ">
                                         <div id="elevator-amount" class="col-md-6">
                                             <label for="elevator-amount">Elevator amount</label>
-                                            <input required type="number" value="" class="form-control" name="elevator-amount" readonly>
+                                            <input type="text" value="" class="form-control" name="elevator-amount" readonly>
                                         </div>
                                         <div id="elevator-unit-price" class="col-md-6">
                                             <label for="elevator-unit-price">Elevator unit price</label>
-                                            <input required type="number" value="" class="form-control" name="elevator-unit-price" readonly>
+                                            <input type="text" value="" class="form-control" name="elevator-unit-price" readonly>
                                         </div>
                                         <div id="elevator-total-price" class="col-md-6">
                                             <label for="elevator-total-price">Elevator total price</label>
-                                            <input required type="number" value="" class="form-control" name="elevator-total-price" readonly>
+                                            <input type="text" value="" class="form-control" name="elevator-total-price" readonly>
                                         </div>
                                         <div id="installation-fees" class="col-md-6">
                                             <label for="installation-fees">Installation fees</label>
-                                            <input required type="number" value="" class="form-control" name="installation-fees" readonly>
+                                            <input type="text" value="" class="form-control" name="installation-fees" readonly>
                                         </div>
                                         <div id="final-price" class="col-md-6">
                                             <label for="final-price">Final price</label>
-                                            <input required type="number" value="" class="form-control" name="final-price" readonly>
+                                            <input type="text" value="" class="form-control" name="final-price" readonly>
                                         </div>
 
                                     </div>
@@ -371,6 +314,9 @@
 		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
 
 		<script src="assets/js/scripts.js"></script>
+
+		<script src="assets/js/quote.js"></script>
+
 		
 	</body>
 </html>
