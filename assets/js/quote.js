@@ -75,8 +75,10 @@ function getInstallationFees(productLine) {
     }
 }
 
-function calculateResidential(apartments, floors, basements, productLine) {
-    let results = {
+function calculateResidential(apartments, floors, basements, productLine) 
+{
+    let results = 
+    {
         elevatorAmount: 0,
         elevatorUnitPrice: 0,
         elevatorTotalPrice: 0,
@@ -106,8 +108,10 @@ function calculateResidential(apartments, floors, basements, productLine) {
     
 }
 
-function calculateCommercial(floors, basements, companies, parkingSpots, elevators, productLine) {
-    let results = {
+function calculateCommercial(floors, basements, companies, parkingSpots, elevators, productLine) 
+{
+    let results = 
+    {
         elevatorAmount: 0,
         elevatorUnitPrice: 0,
         elevatorTotalPrice: 0,
@@ -117,7 +121,8 @@ function calculateCommercial(floors, basements, companies, parkingSpots, elevato
     let productLinePrice = getProductLinePrice(productLine);
     let productLineFees = getInstallationFees(productLine);
 
-    if (!isNaN(elevators) && !isNaN(productLinePrice)) {
+    if (!isNaN(elevators) && !isNaN(productLinePrice)) 
+    {
         results.elevatorAmount      = elevators;
         results.elevatorUnitPrice   = productLinePrice;
         results.elevatorTotalPrice  = results.elevatorAmount*productLinePrice;
@@ -130,8 +135,10 @@ function calculateCommercial(floors, basements, companies, parkingSpots, elevato
     
 }
 
-function calculateCorporate(floors, basements, parkingSpots, corporations, occupancy, productLine) {
-    let results = {
+function calculateCorporate(floors, basements, parkingSpots, corporations, occupancy, productLine) 
+{
+    let results = 
+    {
         elevatorAmount: 0,
         elevatorUnitPrice: 0,
         elevatorTotalPrice: 0,
@@ -141,20 +148,31 @@ function calculateCorporate(floors, basements, parkingSpots, corporations, occup
     let productLinePrice = getProductLinePrice(productLine);
     let productLineFees = getInstallationFees(productLine);
 
-    // if (!isNaN(elevators) && !isNaN(productLinePrice)) {
-    //     results.elevatorAmount      = occuoancy * floors
-    //     results.elevatorUnitPrice   = productLinePrice
-    //     results.elevatorTotalPrice  = results.elevatorAmount*productLinePrice;
-    //     results.installationFees    = results.elevatorTotalPrice*productLineFees;
-    //     results.finalPrice          = results.elevatorTotalPrice+results.installationFees;
-    // }
+    if (!isNaN(floors) && !isNaN(basements) && !isNaN(occupancy) && !isNaN(productLinePrice)) 
+    {
+       
+        let totalOccupancy = Math.ceil(occupancy * (floors+basements));
+        results.elevatorAmount = Math.ceil(totalOccupancy / 1000);
+        if ((floors+basements) > 20) 
+    {
+             let modifier = Math.ceil((floors+basements) / 20);
+             results.elevatorColumn = results.elevatorAmount / modifier;
+             results.elevatorAmount = results.elevatorColumn*modifier; 
+    }
+        
+        results.elevatorUnitPrice   = productLinePrice;
+        results.elevatorTotalPrice  = results.elevatorAmount*productLinePrice;
+        results.installationFees    = results.elevatorTotalPrice*productLineFees;
+        results.finalPrice          = results.elevatorTotalPrice+results.installationFees;
+    }
 
     displayResults(results); 
     
     
 }
 
-function calculateHybrid(floors, basements, companies, parkingSpots, occupancy, businessHours,  productLine) {
+function calculateHybrid(floors, basements, companies, parkingSpots, occupancy, businessHours,  productLine)
+ {
     let results = {
         elevatorAmount: 0,
         elevatorUnitPrice: 0,
@@ -165,17 +183,26 @@ function calculateHybrid(floors, basements, companies, parkingSpots, occupancy, 
     let productLinePrice = getProductLinePrice(productLine);
     let productLineFees = getInstallationFees(productLine);
 
-    // if (!isNaN(elevators) && !isNaN(productLinePrice)) {
-    //     results.elevatorAmount      = 
-    //     results.elevatorUnitPrice   = 
-    //     results.elevatorTotalPrice  = 
-    //     results.installationFees    = results.elevatorTotalPrice*productLineFees;
-    //     results.finalPrice          = results.elevatorTotalPrice+results.installationFees;
-    // }
-
-    displayResults(results); 
+    if (!isNaN(floors) && !isNaN(basements) && !isNaN(occupancy) && !isNaN(productLinePrice)) 
+    {
+       
+        let totalOccupancy = Math.ceil(occupancy * (floors+basements));
+        results.elevatorAmount = Math.ceil(totalOccupancy / 1000);
+        if ((floors+basements) > 20) 
+        {
+            let modifier = Math.ceil((floors+basements) / 20);
+            results.elevatorColumn = results.elevatorAmount / modifier;
+            results.elevatorAmount = results.elevatorColumn*modifier; 
+        }
+       
+        results.elevatorUnitPrice   = productLinePrice;
+        results.elevatorTotalPrice  = results.elevatorAmount*productLinePrice;
+        results.installationFees    = results.elevatorTotalPrice*productLineFees;
+        results.finalPrice          = results.elevatorTotalPrice+results.installationFees;   
     
     
+    }
+    displayResults(results);
 }
 
 function displayResults(results) {
