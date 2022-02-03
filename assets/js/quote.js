@@ -90,7 +90,7 @@ function calculateResidential(apartments, floors, basements, productLine)
     
 
     if (!isNaN(apartments) && !isNaN(floors) && !isNaN(basements) && !isNaN(productLinePrice)) {
-        let averageApartments = Math.ceil(apartments / (floors - basements));
+        let averageApartments = Math.ceil(apartments / floors);
         results.elevatorAmount = Math.ceil(averageApartments / 6);
         if (floors > 20) {
             let modifier = Math.ceil(floors / 20);
