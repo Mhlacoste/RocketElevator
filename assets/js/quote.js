@@ -12,11 +12,16 @@ function displayBuildingTypeSection() {
         
         $('.inputField.' + buildingType).show();
         $('.product-line').show();
+        calculateBulding();
+    } else {
+        displayResults(getInitialResults());
     }
+    
 }
 
 // listening on the change of the form
-$('input[type="number"]').change(calculateBulding);
+$('input[type="number"]').on('change', calculateBulding);
+$('input[type="number"]').on('keyup', calculateBulding);
 $('input[type="radio"]').change(calculateBulding);
 
 /**
@@ -42,11 +47,11 @@ function calculateBulding() {
             break;
 
         case "commercial":
-            calculateCommercial(floors, basements, companies, parkingSpots, elevators, productLine);
+            calculateCommercial(elevators, productLine);
             break;
 
         case "corporate":
-        case "hybrid":companies
+        case "hybrid":
             calculateCorporateHybrid(floors, basements, occupancy, productLine);
             break;
     }
@@ -78,17 +83,19 @@ function getInstallationFees(productLine) {
             return 0.16;                
     }
 }
-const initialResults = {
-    elevatorAmount: 0,
-    elevatorUnitPrice: 0,
-    elevatorTotalPrice: 0,
-    installationFees: 0, 
-    finalPrice: 0
-};
+function getInitialResults() {
+    return {
+        elevatorAmount: 0,
+        elevatorUnitPrice: 0,
+        elevatorTotalPrice: 0,
+        installationFees: 0, 
+        finalPrice: 0
+    };
+}
 
 function calculateResidential(apartments, floors, basements, productLine) 
 {
-    let results = initialResults;
+    let results = getInitialResults();
     
     let productLinePrice = getProductLinePrice(productLine);
     let productLineFees = getInstallationFees(productLine);
@@ -115,7 +122,7 @@ function calculateResidential(apartments, floors, basements, productLine)
 
 function calculateCommercial(elevators, productLine) 
 {
-    let results = initialResults;
+    let results = getInitialResults();
    
     let productLinePrice = getProductLinePrice(productLine);
     let productLineFees = getInstallationFees(productLine);
@@ -136,7 +143,7 @@ function calculateCommercial(elevators, productLine)
 
 function calculateCorporateHybrid(floors, basements, occupancy, productLine) 
 {
-    let results = initialResults;
+    let results = getInitialResults();
     
     let productLinePrice = getProductLinePrice(productLine);
     let productLineFees = getInstallationFees(productLine);
@@ -146,12 +153,8 @@ function calculateCorporateHybrid(floors, basements, occupancy, productLine)
        
         let totalOccupancy = Math.ceil(occupancy * (floors+basements));
         results.elevatorAmount = Math.ceil(totalOccupancy / 1000);
-        if ((floors+basements) > 20) 
-        {
-             let modifier = Math.ceil((floors+basements) / 20);
-             results.elevatorColumn = results.elevatorAmount / modifier;
-             results.elevatorAmount = results.elevatorColumn*modifier; 
-        }
+        results.elevatorColumn = Math.ceil((floors+basements) / 20);
+        results.elevatorAmount = Math.ceil(Math.ceil(results.elevatorAmount / results.elevatorColumn) * results.elevatorColumn);
         
         results.elevatorUnitPrice   = productLinePrice;
         results.elevatorTotalPrice  = results.elevatorAmount*productLinePrice;
