@@ -1,15 +1,13 @@
-
+//listening on the change of the building type
 $('#building-type').change(displayBuildingTypeSection);
 
 function displayBuildingTypeSection() {
     
     let buildingType = $('#building-type').val();
 
-    
     $('.inputField').hide();
     $('.product-line').hide();
 
-    
     if (buildingType != "") {
         
         $('.inputField.' + buildingType).show();
@@ -17,10 +15,13 @@ function displayBuildingTypeSection() {
     }
 }
 
-
+// listening on the change of the form
 $('input[type="number"]').change(calculateBulding);
 $('input[type="radio"]').change(calculateBulding);
 
+/**
+ * Get form data 
+ */
 function calculateBulding() {
     
     let buldingType     = $('#building-type').val();
@@ -31,28 +32,31 @@ function calculateBulding() {
     let companies       = parseInt($('input[name="number-of-companies"]').val());
     let parkingSpots    = parseInt($('input[name="number-of-parking-spots"]').val());
     let elevators       = parseInt($('input[name="number-of-elevators"]').val());
-    let corporations    = parseInt($('input[name="number-of-corporations"]').val());
     let occupancy       = parseInt($('input[name="maximum-of-occupancy"]').val());
-    let businessHours   = parseInt($('input[nape="business-hours"]').val());
+    
 
     
     switch(buldingType) {
         case "residential":
             calculateResidential(apartments, floors, basements, productLine);
             break;
+
         case "commercial":
             calculateCommercial(floors, basements, companies, parkingSpots, elevators, productLine);
             break;
 
         case "corporate":
-            calculateCorporate(floors, basements, parkingSpots, corporations, occupancy, productLine);
+        case "hybrid":companies
+            calculateCorporateHybrid(floors, basements, occupancy, productLine);
             break;
-
-        case "hybrid":
-            calculateHybrid(floors, basements, companies, parkingSpots, occupancy, businessHours,  productLine);
     }
 }
 
+/**
+ * Get product line price
+ * @param {string} productLine 
+ * @returns {number} Product line price
+ */
 function getProductLinePrice(productLine) {
     switch(productLine) {
         case "standard":
@@ -74,17 +78,18 @@ function getInstallationFees(productLine) {
             return 0.16;                
     }
 }
+const initialResults = {
+    elevatorAmount: 0,
+    elevatorUnitPrice: 0,
+    elevatorTotalPrice: 0,
+    installationFees: 0, 
+    finalPrice: 0
+};
 
 function calculateResidential(apartments, floors, basements, productLine) 
 {
-    let results = 
-    {
-        elevatorAmount: 0,
-        elevatorUnitPrice: 0,
-        elevatorTotalPrice: 0,
-        installationFees: 0, 
-        finalPrice: 0
-    };
+    let results = initialResults;
+    
     let productLinePrice = getProductLinePrice(productLine);
     let productLineFees = getInstallationFees(productLine);
     
@@ -108,16 +113,10 @@ function calculateResidential(apartments, floors, basements, productLine)
     
 }
 
-function calculateCommercial(floors, basements, companies, parkingSpots, elevators, productLine) 
+function calculateCommercial(elevators, productLine) 
 {
-    let results = 
-    {
-        elevatorAmount: 0,
-        elevatorUnitPrice: 0,
-        elevatorTotalPrice: 0,
-        installationFees: 0, 
-        finalPrice: 0
-    };
+    let results = initialResults;
+   
     let productLinePrice = getProductLinePrice(productLine);
     let productLineFees = getInstallationFees(productLine);
 
@@ -135,16 +134,10 @@ function calculateCommercial(floors, basements, companies, parkingSpots, elevato
     
 }
 
-function calculateCorporate(floors, basements, parkingSpots, corporations, occupancy, productLine) 
+function calculateCorporateHybrid(floors, basements, occupancy, productLine) 
 {
-    let results = 
-    {
-        elevatorAmount: 0,
-        elevatorUnitPrice: 0,
-        elevatorTotalPrice: 0,
-        installationFees: 0, 
-        finalPrice: 0
-    };
+    let results = initialResults;
+    
     let productLinePrice = getProductLinePrice(productLine);
     let productLineFees = getInstallationFees(productLine);
 
@@ -154,11 +147,11 @@ function calculateCorporate(floors, basements, parkingSpots, corporations, occup
         let totalOccupancy = Math.ceil(occupancy * (floors+basements));
         results.elevatorAmount = Math.ceil(totalOccupancy / 1000);
         if ((floors+basements) > 20) 
-    {
+        {
              let modifier = Math.ceil((floors+basements) / 20);
              results.elevatorColumn = results.elevatorAmount / modifier;
              results.elevatorAmount = results.elevatorColumn*modifier; 
-    }
+        }
         
         results.elevatorUnitPrice   = productLinePrice;
         results.elevatorTotalPrice  = results.elevatorAmount*productLinePrice;
@@ -171,39 +164,6 @@ function calculateCorporate(floors, basements, parkingSpots, corporations, occup
     
 }
 
-function calculateHybrid(floors, basements, companies, parkingSpots, occupancy, businessHours,  productLine)
- {
-    let results = {
-        elevatorAmount: 0,
-        elevatorUnitPrice: 0,
-        elevatorTotalPrice: 0,
-        installationFees: 0, 
-        finalPrice: 0
-    };
-    let productLinePrice = getProductLinePrice(productLine);
-    let productLineFees = getInstallationFees(productLine);
-
-    if (!isNaN(floors) && !isNaN(basements) && !isNaN(occupancy) && !isNaN(productLinePrice)) 
-    {
-       
-        let totalOccupancy = Math.ceil(occupancy * (floors+basements));
-        results.elevatorAmount = Math.ceil(totalOccupancy / 1000);
-        if ((floors+basements) > 20) 
-        {
-            let modifier = Math.ceil((floors+basements) / 20);
-            results.elevatorColumn = results.elevatorAmount / modifier;
-            results.elevatorAmount = results.elevatorColumn*modifier; 
-        }
-       
-        results.elevatorUnitPrice   = productLinePrice;
-        results.elevatorTotalPrice  = results.elevatorAmount*productLinePrice;
-        results.installationFees    = results.elevatorTotalPrice*productLineFees;
-        results.finalPrice          = results.elevatorTotalPrice+results.installationFees;   
-    
-    
-    }
-    displayResults(results);
-}
 
 function displayResults(results) {
     $('input[name="elevator-amount"]').val(results.elevatorAmount);
